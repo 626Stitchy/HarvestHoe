@@ -24,6 +24,7 @@ public class BlockBreakEvents implements Listener {
         farmables.add(Material.POTATOES);
         farmables.add(Material.CARROTS);
         farmables.add(Material.NETHER_WART);
+        farmables.add(Material.BEETROOT_SEEDS);
     }
 
     @EventHandler

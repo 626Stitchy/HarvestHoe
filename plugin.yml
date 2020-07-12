@@ -1,9 +1,9 @@
-main: com.anubis.HarvestHoe.Main
+main: com.anubis.HarvestHoe.AnubisHarvestHoe
 version: 1.0.0
 author: 626Stitchy
 name: HarvestHoe
 description: HarvestHoe plugin
-api-version: 1.13
+api-version: "1.13"
 
 commands:
   harvesthoe:

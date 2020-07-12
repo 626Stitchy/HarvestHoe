@@ -26,7 +26,7 @@ public class HarvestHoeCommand implements CommandExecutor {
             sender.sendMessage(plugin.convertColors("&9HarvestHoe version " + plugin.getDescription().getVersion()));
             return false;
         }
-        else if(params[0].equalsIgnoreCase("give")) {
+        if(params[0].equalsIgnoreCase("give")) {
             if (!sender.hasPermission("harvesthoe.give")) {
                 sender.sendMessage(plugin.convertColors(plugin.getConfigStringValue("noPermissions")));
             }
@@ -63,17 +63,17 @@ public class HarvestHoeCommand implements CommandExecutor {
             return true;
 
         }
-        else if(params[0].equalsIgnoreCase("reload")) {
+        if(params[0].equalsIgnoreCase("reload")) {
             if(!sender.hasPermission("harvesthoe.reload")) {
                 sender.sendMessage(plugin.convertColors(plugin.getConfigStringValue("noPermissions")));
             }
             this.plugin.reloadConfig();
             this.plugin.saveConfig();
             sender.sendMessage(plugin.convertColors(plugin.getConfigStringValue("configReload")));
+            return true;
         }
-        else {
+
             sender.sendMessage("&cUnrecognized command! Try /harvesthoe give or /harvesthoe reload");
-        }
 
         return true;
     }
