@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="HarvestHoe:jar">
+    <output-path>$USER_HOME$/Desktop/1.15.2/plugins</output-path>
+    <root id="archive" name="HarvestHoe.jar">
+      <element id="module-output" name="HarvestHoe.main" />
+      <element id="file-copy" path="$PROJECT_DIR$/config.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/plugin.yml" />
+    </root>
+  </artifact>
+</component>

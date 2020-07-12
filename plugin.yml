@@ -1,0 +1,11 @@
+main: com.anubis.HarvestHoe.Main
+version: 1.0.0
+author: 626Stitchy
+name: HarvestHoe
+description: HarvestHoe plugin
+api-version: 1.13
+
+commands:
+  harvesthoe:
+    description: Main command
+    aliases: hh

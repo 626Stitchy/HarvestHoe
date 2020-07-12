@@ -1,0 +1,11 @@
+##Lang
+harvestHoeName: "&9&lHarvest Hoe"
+harvestHoeLore: "&7* &5Auto replant crops!"
+inventoryFullTitle: "&4Inventory full!"
+inventoryFullSubTitle: "&cPlease clear out your inventory!"
+configReload: "&aConfig has been reloaded successfully!"
+noPermissions: "&cYou do not have permissions for this action!"
+
+allowed-worlds:
+  - skyblockx
+  - skyblockx_nether
