@@ -5,16 +5,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.List;
 
 public class AnubisHarvestHoe extends JavaPlugin {
-
-    private static AnubisHarvestHoe INSTANCE;
-
-    public static AnubisHarvestHoe getInstance() {
-        return INSTANCE;
-    }
-
     @Override
     public void onEnable() {
-        INSTANCE = this;
         registerConfig();
         saveDefaultConfig();
         registerCommands();
@@ -29,12 +21,12 @@ public class AnubisHarvestHoe extends JavaPlugin {
 
     public void registerCommands()
     {
-        getCommand("harvesthoe").setExecutor(new HarvestHoeCommand());
+        getCommand("harvesthoe").setExecutor(new HarvestHoeCommand(this));
     }
 
     public void registerEvents()
     {
-        getServer().getPluginManager().registerEvents(new BlockBreakEvents(), this);
+        getServer().getPluginManager().registerEvents(new BlockBreakEvents(this), this);
     }
 
     public String getConfigStringValue(String key) {

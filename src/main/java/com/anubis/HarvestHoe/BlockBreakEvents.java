@@ -18,8 +18,8 @@ public class BlockBreakEvents implements Listener {
 
     public List<Material> farmables = new ArrayList<>();
 
-    public BlockBreakEvents() {
-        this.plugin = AnubisHarvestHoe.getInstance();
+    public BlockBreakEvents(AnubisHarvestHoe plugin) {
+        this.plugin = plugin;
         farmables.add(Material.WHEAT);
         farmables.add(Material.POTATOES);
         farmables.add(Material.CARROTS);
@@ -33,6 +33,10 @@ public class BlockBreakEvents implements Listener {
                 !plugin.getConfigStringList("allowed-worlds").contains(e.getBlock().getWorld().getName()) ||
                 !isHarvestHoe(e.getPlayer().getInventory().getItem(e.getPlayer().getInventory().getHeldItemSlot()))) {
             e.setCancelled(true);
+            return;
+        }
+
+        if(!(e.getBlock().getBlockData() instanceof Ageable)) {
             return;
         }
 

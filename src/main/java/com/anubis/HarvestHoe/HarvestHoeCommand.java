@@ -16,8 +16,8 @@ import java.util.List;
 public class HarvestHoeCommand implements CommandExecutor {
     private AnubisHarvestHoe plugin;
 
-    public HarvestHoeCommand() {
-        this.plugin = AnubisHarvestHoe.getInstance();
+    public HarvestHoeCommand(AnubisHarvestHoe plugin) {
+        this.plugin = plugin;
     }
 
     @Override
